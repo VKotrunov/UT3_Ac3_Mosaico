@@ -6,30 +6,41 @@
         xmlns:local="clr-namespace:UT3_Ac3_Mosaico"
         mc:Ignorable="d"
         Title="Mosaico" MinHeight="475" MinWidth="450" Width="675" Height="675" Icon="32.ico">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="vertical">
+            <Setter Property="Width"
+                    Value="100" />
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="horizontal">
+            <Setter Property="Height"
+                    Value="100" />
+        </Style>
+    </Window.Resources>
     <DockPanel>
-        <TextBlock Background="Aqua" 
-                   Height="100" 
+        <TextBlock Style="{StaticResource horizontal}"
+                   Background="Aqua" 
                    DockPanel.Dock="Top"/>
-        <TextBlock Background="Aqua"
-                   Width="100"
+        <TextBlock Style="{StaticResource vertical}"
+                   Background="Aqua"
                    DockPanel.Dock="Left" />
-        <TextBlock Background="GreenYellow"
-                   Height="100"
+        <TextBlock Style="{StaticResource horizontal}"
+                   Background="GreenYellow"
                    DockPanel.Dock="Bottom" />
-        <TextBlock Background="GreenYellow"
-                   Width="100"
+        <TextBlock Style="{StaticResource vertical}"
+                   Background="GreenYellow"
                    DockPanel.Dock="Right" />
-        <TextBlock Background="Orange"
-                   Width="100"
+        <TextBlock Style="{StaticResource vertical}"
+                   Background="Orange"
                    DockPanel.Dock="Left" />
-        <TextBlock Background="Orange"
-                   Height="100"
+        <TextBlock Style="{StaticResource horizontal}"
+                   Background="Orange"
                    DockPanel.Dock="Bottom" />
-        <TextBlock Background="Red"
-                   Width="100"
+        <TextBlock Style="{StaticResource vertical}"
+                   Background="Red"
                    DockPanel.Dock="Right" />
-        <TextBlock Background="Red"
-                   Height="100"
+        <TextBlock Style="{StaticResource horizontal}"
+                   Background="Red"
                    DockPanel.Dock="Top" />
         <TextBlock Background="Black"/>
     </DockPanel>
